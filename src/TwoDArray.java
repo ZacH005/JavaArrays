@@ -1,7 +1,4 @@
-import javax.xml.transform.Source;
 import java.util.Scanner;
-import java.math.MathContext;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class TwoDArray {
     public static void main(String[] args) {

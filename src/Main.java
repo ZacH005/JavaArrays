@@ -1,11 +1,6 @@
-//import javax.xml.transform.Source;
-import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
-import java.util.ArrayList;
-//import java.math.MathContext;
-//import java.util.concurrent.ThreadLocalRandom;
-//import java.util.*;
+
 
 public class Main {
 

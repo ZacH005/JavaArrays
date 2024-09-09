@@ -1,25 +1,29 @@
-import javax.xml.transform.Source;
+//import javax.xml.transform.Source;
+import java.util.Locale;
 import java.util.Scanner;
-import java.math.MathContext;
-import java.util.concurrent.ThreadLocalRandom;
-import java.util.*;
+//import java.math.MathContext;
+//import java.util.concurrent.ThreadLocalRandom;
+//import java.util.*;
 
 public class Main {
-    static void everythingElse(int[] randomArray) {
-        //Request for number generation range: range = {min =< x =< max}
-        Scanner rangeObj = new Scanner(System.in);
 
-        //Ignores commas and spaces or whatever found in input
-        rangeObj.useDelimiter("[\\s,\r\n]+");
-        System.out.println("What is the domain (Min Max) of the array?");
-        int arrMin = rangeObj.nextInt(), arrMax = rangeObj.nextInt(), sum = 0, counter = 0;
+    public static void main(String[] args) {
 
-        //Generate random numbers within range and place into new array
-        for (int v : randomArray){
-            int randomNum = ThreadLocalRandom.current().nextInt(arrMin, arrMax + 1);
-            randomArray[counter] = randomNum;
-            counter++;
+        GenerateArray randArr = new GenerateArray();
+
+        Scanner createObj = new Scanner(System.in);
+        System.out.println("Do you want to create an array?");
+        String answer = (createObj.nextLine()).toLowerCase(Locale.ROOT);
+
+        if ((answer.equals("yes"))) {
+            randArr.genArr();
+        } else {
+            System.out.println("Goodbye then...");
+            System.out.println("Until next time!");
         }
+    }
+
+    public static void everythingElse(int[] randomArray, int sum) {
 
         //int[][] randomArray = { {6, 1, 3, 7, 234, 5, 234, -1, -19, 10}, {256, 3, -4}};
 
@@ -32,10 +36,9 @@ public class Main {
 //        String targetWord = wordObj.nextLine();
 //        System.out.println(targetWord.indexOf("at"));
 
-        for (int v : randomArray) {
-            System.out.println(v);
-            sum += v;
-        }
+//        for (int v : randomArray) {
+//            System.out.println(v);
+//        }
 
         for (int i = 0; i < randomArray.length - 1; i++) {
             for (int j = 0; j < (randomArray.length - 1) - i; j++) {
@@ -46,10 +49,6 @@ public class Main {
                 }
             }
         }
-
-
-        float avg = (float) sum /randomArray.length;
-        System.out.println("The average of this array is: " + avg);
 
         int max = randomArray.length - 1, min = 0;
 
@@ -76,14 +75,5 @@ public class Main {
 
         String findings = target + ((isFound) ? " was found" : (target == 2) ? " isn't in here, but it is a special number" : " was not found");
         System.out.println(findings);
-    }
-    public static void main(String[] args) {
-        //Define length of array
-        Scanner lenObj = new Scanner(System.in);
-        System.out.println("How many numbers would you like in the array?");
-        int arrLen = lenObj.nextInt();
-        int[] randomArray = new int[arrLen];
-
-        everythingElse(randomArray);
     }
 }

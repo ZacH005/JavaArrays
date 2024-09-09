@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class StoreArray {
-    public static ArrayList<int[]> myArrays = new ArrayList<int[]>();
-    public static ArrayList<Float> myAverages = new ArrayList<Float>();
+    public static ArrayList<int[]> myArrays = new ArrayList<>();
+    public static ArrayList<Float> myAverages = new ArrayList<>();
 
 
     public static void storeArr(int[] newArray, float arrAvg) {

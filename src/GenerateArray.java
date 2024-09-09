@@ -6,7 +6,7 @@ import java.util.*;
 
 public class GenerateArray {
 
-    public void genArr() {
+    public static void genArr() {
         //Define length of array
         Scanner lenObj = new Scanner(System.in);
         System.out.println("How many numbers would you like in the array?");
@@ -29,8 +29,8 @@ public class GenerateArray {
         }
 
         float avg = (float) sum/randomArray.length;
-        System.out.println("The average of this array is: " + avg);
+        //System.out.println("The average of this array is: " + avg);
 
-        Main.everythingElse(randomArray, sum);
+        Main.sortArray(randomArray, avg);
     }
 }

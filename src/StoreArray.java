@@ -12,8 +12,8 @@ public class StoreArray {
         myAverages.add(arrAvg);
 
         System.out.println("New array stored!");
-        System.out.println(myArrays.size());
-        System.out.println(Arrays.toString(myArrays.getFirst()));
+//        System.out.println(myArrays.size());
+//        System.out.println(Arrays.toString(myArrays.getFirst()));
 
         Main.guessArr(myArrays.indexOf(newArray));
     }
